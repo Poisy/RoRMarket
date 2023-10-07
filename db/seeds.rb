@@ -7,3 +7,29 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+(1..3).each { |b|
+  brand = Brand.new(
+    name: "brand-#{b}",
+    description: "description-#{b}",
+    active: b%2==0,
+    redemption: b%2==0 ? "online" : "instore")
+  brand.save
+
+  (1..3).each { |p|
+    product = Product.new(
+      brand_id: brand.id,
+      name: "product-#{b}-#{p}",
+      amount: rand(1.0..10000.0).round(2),
+      active: p%2==1)
+    product.save
+
+    (1..3).each { |c|
+      card = Card.new(
+        product_id: product.id,
+        status: c%2==0 ? "available" : "issued",
+        amount: product.amount)
+      card.save
+    }
+  }
+}
