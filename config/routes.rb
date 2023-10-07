@@ -7,4 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  namespace :api do
+    get "brands" => "brand#get_all"
+    get "brands/:id" => "brand#get_by_id"
+    get "products" => "product#get_all"
+    get "products/:id" => "product#get_by_id"
+  end
 end
