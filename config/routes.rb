@@ -13,5 +13,7 @@ Rails.application.routes.draw do
     get "brands/:id" => "brand#get_by_id"
     get "products" => "product#get_all"
     get "products/:id" => "product#get_by_id"
+    post "issue" => "issue#create"
+    get "cards/:id" => "card#get_by_id"
   end
 end
