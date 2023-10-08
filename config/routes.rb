@@ -15,5 +15,10 @@ Rails.application.routes.draw do
     get "products/:id" => "product#get_by_id"
     post "issue" => "issue#create"
     get "cards/:id" => "card#get_by_id"
+
+    namespace :wogi do
+      get "products" => "product#get_all"
+      get "products/:id" => "product#get_by_id"
+    end
   end
 end
