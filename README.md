@@ -1,24 +1,30 @@
-# README
+# RoR Market
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Ruby on Rails API for managing products with cards.
 
-Things you may want to cover:
+## Setup with docker
 
-* Ruby version
+1. Run docker-compose:
 
-* System dependencies
+    ```sh
+    docker-compose build
+    ```
 
-* Configuration
+    ```sh
+    docker-compose up
+    ```
 
-* Database creation
+2. Setup database:
 
-* Database initialization
+    ```sh
+    docker-compose exec web bundle exec rails db:setup
+    ```
 
-* How to run the test suite
+## Endpoints
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [GET] /brands
+- [GET] /brands/:id
+- [GET] /products
+- [GET] /products/:id
+- [GET] /cards/:id
+- [POST] /issue
