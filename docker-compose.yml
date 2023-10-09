@@ -13,4 +13,3 @@ services:
       - .:/usr/src/app
     depends_on: 
       - db
-    command: rails s -b 0.0.0.0

@@ -112,6 +112,8 @@ GEM
     marcel (1.0.2)
     mini_mime (1.1.5)
     minitest (5.20.0)
+    money (6.16.0)
+      i18n (>= 0.6.4, <= 2)
     msgpack (1.7.2)
     multi_xml (0.6.0)
     mutex_m (0.1.2)
@@ -195,6 +197,7 @@ DEPENDENCIES
   debug
   error_highlight (>= 0.4.0)
   httparty (~> 0.21.0)
+  money (~> 6.16)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.0)

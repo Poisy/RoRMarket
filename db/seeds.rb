@@ -21,6 +21,7 @@
       brand_id: brand.id,
       name: "product-#{b}-#{p}",
       amount: rand(1.0..10000.0).round(2),
+      currency: "USD",
       active: p%2==1)
     product.save
 
@@ -28,6 +29,7 @@
       card = Card.new(
         product_id: product.id,
         status: c%2==0 ? "available" : "issued",
+        currency: "USD",
         amount: product.amount)
       card.save
     }
